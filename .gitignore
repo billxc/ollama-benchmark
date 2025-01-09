@@ -1,0 +1,27 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+.env/
+
+# Ignore output directory
+output/
+
+# Ignore YAML result files
+*_results.yaml
+output-*
+output/
+*.delete
+
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.vscode/
+.idea/

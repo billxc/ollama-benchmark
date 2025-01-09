@@ -1,0 +1,11 @@
+output_dir: output
+models:
+  - llama3.2-vision
+  - phi4
+  - qwen2:7b
+  - llama3:8b-instruct-q6_K
+  - llama3:8b-instruct-q8_0
+  - qwen2:7b-instruct-q8_0
+  - llama3:latest
+
+

@@ -1,0 +1,58 @@
+tasks:
+  text_generation:
+  # creative_writing:
+    - "写一个关于时间旅行的科幻故事的开头段落。"
+    - "用生动的意象和描述性的语言写一首关于秋天的诗。"
+  # news_reporting:
+    - "写一篇关于最新技术突破的新闻文章，标题为‘量子计算的重大进展’。"
+  #    dialogue_generation:
+    - "模拟一场关于环境保护的对话，参与者是一位环境专家和一名记者。"
+
+  question_answering:
+#    factual_questions:
+    - "爱因斯坦的相对论是如何改变我们对时间和空间的理解的？"
+    - "世界上最高的山是什么，它的高度是多少？"
+#    reasoning_questions:
+    - "如果所有的猫都是动物，而有些动物是宠物，那么所有的猫都是宠物吗？解释你的推理。"
+    - "一个盒子里有10个红球和5个蓝球。随机抽取一个红球的概率是多少？"
+
+  translation:
+#    language_translation:
+    - "将以下句子翻译成法语：‘我喜欢在周末去公园散步。’"
+    - "将这段中文翻译成英文：‘人工智能正在改变我们的生活方式。’"
+
+  text_summarization:
+#    summary_generation:
+    - "总结以下文章：‘人工智能的进步正在迅速改变各个行业，从医疗保健到金融。随着技术的进步，AI的应用不断扩展。’"
+
+  sentiment_analysis:
+#    sentiment_classification:
+    - "分析以下句子的情感：‘今天我很高兴，因为我收到了好消息！’"
+
+  code_generation_and_explanation:
+#    code_generation:
+    - "编写一个Python函数，计算给定列表中所有整数的平均值。"
+#    code_explanation:
+    - "解释以下Python代码的作用：\n  ```python\n  def factorial(n):\n      if n == 0:\n          return 1\n      else:\n          return n * factorial(n-1)\n  ```"
+
+  common_sense_and_logical_reasoning:
+#    common_sense_questions:
+    - "为什么天空是蓝色的？"
+    - "为什么人类需要睡眠？"
+#    logical_reasoning:
+    - "如果今天是星期三，三天后是星期几？"
+    - "如果所有A都是B，所有B都是C，那么所有A都是C吗？"
+
+  image_description:
+#    image_description:
+    - "描述这张图片的内容（提供图片）。"
+
+  text_correction:
+#    grammar_correction:
+    - "纠正以下句子的语法错误：‘她昨天去公园了。’"
+
+  knowledge_application:
+#    historical_knowledge:
+    - "简要解释法国大革命的主要原因和影响。"
+#    scientific_knowledge:
+    - "解释牛顿的三大运动定律。"

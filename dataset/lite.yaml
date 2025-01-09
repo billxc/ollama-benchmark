@@ -1,0 +1,7 @@
+tasks:
+  text_generation:
+    - "Write the opening paragraph of a science fiction story about time travel."
+
+  question_answering:
+    - "How did Einstein’s theory of relativity change our understanding of time and space?"
+    - "What is the tallest mountain in the world, and what is its height?"

@@ -1,0 +1,58 @@
+tasks:
+  text_generation:
+  # creative_writing:
+    - "Write the opening paragraph of a science fiction story about time travel."
+    - "Compose a poem about autumn, using vivid imagery and descriptive language."
+  # news_reporting:
+    - "Write a news article about the latest technological breakthrough, titled 'Major Advances in Quantum Computing.'"
+  #    dialogue_generation:
+    - "Simulate a conversation about environmental conservation between an environmental expert and a journalist."
+
+  question_answering:
+#    factual_questions:
+    - "How did Einstein’s theory of relativity change our understanding of time and space?"
+    - "What is the tallest mountain in the world, and what is its height?"
+#    reasoning_questions:
+    - "If all cats are animals and some animals are pets, are all cats pets? Explain your reasoning."
+    - "A box contains 10 red balls and 5 blue balls. What is the probability of randomly drawing a red ball?"
+
+  translation:
+#    language_translation:
+    - "Translate the following sentence into French: 'I like to walk in the park on weekends.'"
+    - "Translate this Chinese paragraph into English: '人工智能正在改变我们的生活方式。'"
+
+  text_summarization:
+#    summary_generation:
+    - "Summarize the following article: 'Advancements in artificial intelligence are rapidly transforming various industries, from healthcare to finance. As technology progresses, the applications of AI continue to expand.'"
+
+  sentiment_analysis:
+#    sentiment_classification:
+    - "Analyze the sentiment of the following sentence: 'I am very happy today because I received good news!'"
+
+  code_generation_and_explanation:
+#    code_generation:
+    - "Write a Python function that calculates the average of all integers in a given list."
+#    code_explanation:
+    - "Explain what the following Python code does:\n  ```python\n  def factorial(n):\n      if n == 0:\n          return 1\n      else:\n          return n * factorial(n-1)\n  ```"
+
+  common_sense_and_logical_reasoning:
+#    common_sense_questions:
+    - "Why is the sky blue?"
+    - "Why do humans need sleep?"
+#    logical_reasoning:
+    - "If today is Wednesday, what day will it be three days from now?"
+    - "If all A are B, and all B are C, are all A C?"
+
+  image_description:
+#    image_description:
+    - "Describe the content of this image (provide an image)."
+
+  text_correction:
+#    grammar_correction:
+    - "Correct the grammatical errors in the following sentence: 'She go to the park yesterday.'"
+
+  knowledge_application:
+#    historical_knowledge:
+    - "Briefly explain the main causes and effects of the French Revolution."
+#    scientific_knowledge:
+    - "Explain Newton’s three laws of motion."
