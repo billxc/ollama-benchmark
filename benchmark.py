@@ -2,6 +2,51 @@ import time
 import yaml
 import os
 import ollama
+
+def convert_to_markdown_table(data):
+    """Convert the parsed YAML data into a Markdown table with readable headers and values."""
+    header_mapping = {
+        'prompt_eval_duration': 'Prompt Evaluation Duration',
+        'prompt_eval_token_per_second': 'Prompt Tokens/Second',
+        'prompt_token_count': 'Prompt Token Count',
+        'response_eval_duration': 'Response Evaluation Duration',
+        'response_eval_token_per_second': 'Response Tokens/Second',
+        'response_token_count': 'Response Token Count',
+        'word_count': 'Word Count'
+    }
+    
+    models = list(data.keys())
+    headers = ['Model'] + list(header_mapping.values())
+    header_row = '| ' + ' | '.join(headers) + ' |'
+    separator = '| ' + (' :---: | ' * len(headers))
+
+    def format_value(value, metric_key):
+        try:
+            if 'eval_duration' in metric_key:
+                total_seconds = float(value)
+                minutes, seconds = divmod(total_seconds, 60)
+                return f"{int(minutes)}:{int(seconds):02d}"
+            elif 'token_per_second' in metric_key:
+                return f"{float(value):.1f}"
+            elif 'token_count' in metric_key or 'word_count' in metric_key:
+                return f"{int(float(value)):,}"
+            else:
+                return str(value)
+        except (ValueError, TypeError):
+            return str(value)
+
+    rows = []
+    for model in models:
+        metrics = data[model]
+        row_values = [model] + [
+            format_value(metrics[key], key) 
+            for key in metrics.keys()
+        ]
+        row = '| ' + ' | '.join(row_values) + ' |'
+        rows.append(row)
+    
+    table = '\n'.join([header_row, separator] + rows)
+    return table
 from ollama import chat
 
 def load_config(config_path='config.yaml'):
@@ -114,5 +159,12 @@ def main():
         compare_results[model_name] = total.to_dict()
         with open("compare_results.yaml", 'w') as file:
             yaml.dump(compare_results, file)
+
+        # Convert compare_results to Markdown and save to a file
+        markdown_table = convert_to_markdown_table(compare_results)
+        with open("compare_results.md", 'w') as md_file:
+            md_file.write(markdown_table)
+        print("Markdown table saved to 'compare_results.md'")
+
 if __name__ == "__main__":
     main()
